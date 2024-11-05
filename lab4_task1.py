@@ -3,16 +3,16 @@ class Stadium:
     def __init__(self, match="None vs None", totalGoals=0, numOfSpectators=0, name="Name", lightInLx=0):
         self.match = match
         self.totalGoals = totalGoals
-        self.__numOfSpectators = numOfSpectators
+        self.__numberOfSpectators = numOfSpectators
         self.__name = name
-        self.__lightInLx = lightInLx
+        self.__lightInLuxs = lightInLx
 
     # Геттери і сеттери
     def getNumOfSpectators(self):
-        return self.__numOfSpectators
+        return self.__numberOfSpectators
     
     def setNumOfSpectators(self, num):
-        self.__numOfSpectators = num
+        self.__numberOfSpectators = num
 
     def getName(self):
         return self.__name
@@ -21,14 +21,19 @@ class Stadium:
         self.__name = name
 
     def getLightInLx(self):
-        return self.__lightInLx
+        return self.__lightInLuxs
     
     def setLightInLx(self, light):
-        self.__lightInLx = light
+        self.__lightInLuxs = light
 
     # Перевизначення методів
     def __str__(self):
-        return f"Match: {self.match},\nTotal Goals: {self.totalGoals},\nSpectators: {self.__numOfSpectators},\nName: {self.__name},\nLight: {self.__lightInLx}"
+        return f"Match: 
+        {self.match},\nTotal Goals: 
+        {self.totalGoals},\nSpectators: 
+        {self.__numberOfSpectators},\nName: 
+        {self.__name},\nLight: 
+        {self.__lightInLuxs}"
     
     def __repr__(self):
         return f"Stadium: {Stadium}"
@@ -47,7 +52,7 @@ def main():
         std2.match = "Real Madrid vs Barcelona"
         std2.totalGoals = 4
 
-        std3.__lightInLx = 11
+        std3.__lightInLuxs = 11
 
         # Виводимо значення різними способами
         print(f"{std1}\n")
